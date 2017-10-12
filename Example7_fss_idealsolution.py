@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #import numpy as np 
 #dataset_name = "randsoftset.txt"
-dataset_name = "example8.txt"
+dataset_name = "example7.txt"
 
 def prt_softset(sf):
     for obj in sf:
