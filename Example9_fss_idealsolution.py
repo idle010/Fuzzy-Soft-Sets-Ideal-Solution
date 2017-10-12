@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #import numpy as np 
 #dataset_name = "randsoftset.txt"
-dataset_name = "example9.txt"
+dataset_name = "example10.txt"
 
 def prt_softset(sf):
     for obj in sf:
@@ -99,7 +99,7 @@ if __name__ == '__main__':
     sfset = load_softset()
     prt_softset(sfset)
 
-    weight = [8.0/60, 8.0/60, 8.0/60, 14.0/60 , 11.0/60, 11.0/60]
+    weight = [2.0/15, 2.0/15, 2.0/15, 5.0/15 , 2.0/15, 2.0/15]
     result = weighted_Ham_dist_choice(sfset, weight)
     for ret in result[0]:
         print "The min distance is:%.4f The choice is:h%d" % \

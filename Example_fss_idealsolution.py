@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #import numpy as np 
 #dataset_name = "randsoftset.txt"
-dataset_name = "example10.txt"
+dataset_name = "example7.txt"
 
 def prt_softset(sf):
     for obj in sf:
@@ -82,30 +82,22 @@ def weighted_Ham_dist_choice(sf, weight):
         elif dist == decision[0][0]:
             decision.append([dist, pos])
 
-    return decision, n_hamdistance
+    return decision
 
-from operator import itemgetter
-from collections import OrderedDict
-def sort_dist_order(data_list):
-    data_dict = {}
-    for i in range(0,len(data_list)):
-        data_dict[i] = data_list[i] 
-    
-    print data_dict
-    retdata = OrderedDict(sorted(data_dict.items(), key=lambda t: t[1]))
-    return retdata.keys()
 
 if __name__ == '__main__':
     sfset = load_softset()
     prt_softset(sfset)
-
-    weight = [2.0/15, 2.0/15, 2.0/15, 5.0/15 , 2.0/15, 2.0/15]
-    result = weighted_Ham_dist_choice(sfset, weight)
-    for ret in result[0]:
+    result = norm_Ham_dist_choice(sfset)
+    for ret in result:
         print "The min distance is:%.4f The choice is:h%d" % \
             (ret[0], ret[1])
-    tmppos = sort_dist_order(result[1])
-    
-    print " < ".join([str(c + 1) for c in tmppos])
+
+    weight = [1.0/2, 1.0/4, 1.0/8, 1.0/16, 1.0/32, 1.0/64, 0]
+    print weight
+    result = weighted_Ham_dist_choice(sfset, weight)
+    for ret in result:
+        print "The min distance is:%.4f The choice is:h%d" % \
+            (ret[0], ret[1])
 
 
