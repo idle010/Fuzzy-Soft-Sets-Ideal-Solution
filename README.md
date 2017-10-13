@@ -35,11 +35,8 @@ C:\Examples&gt;e:\python27\python.exe Example3_weighted_choice_value.py<br />
 [0.5, 0.25, 0.125, 0.0625]<br />
 The choicevalue is:0.9375 position is:0<br />
 The choicevalue is:0.9375 position is:5<br />
-<div>
-	<br />
-</div>
 <br />
-
+<br />
 
 The Programs for Example2, Example3.&nbsp;<br />
 2017-10-09&nbsp; 19:20&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 54 example1.txt<br />
@@ -78,15 +75,8 @@ Score Table=<br />
 33 &amp; 48 &amp; -15<br />
 [-22, 13, 10, 7, -11, 11, 7, -15]<br />
 The max score is:13 , pos is:1<br />
-<div>
-	<br />
-</div>
 <br />
-<div>
-	<br />
-</div>
 <br />
-
 
 The Programs for Example4.&nbsp;<br />
 2017-10-09&nbsp; 22:06&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;232 example4.txt<br />
@@ -110,17 +100,9 @@ The max score is:3 , pos is:1<br />
 {0: 2, 1: 3, 2: -5}<br />
 [2, 0, 1]<br />
 2 &gt; 0 &gt; 1<br />
-<div>
-	<br />
-</div>
-<div>
-	<br />
-</div>
 <br />
-<div>
-	<br />
-</div>
 <br />
+
 
 The Programs for Example5.&nbsp;<br />
 2017-10-09&nbsp; 22:39&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 75 example5.txt<br />
@@ -245,14 +227,6 @@ The Programs for Example9.&nbsp;<br />
 2017-10-09&nbsp; 23:12&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;566 randgen_softset.py<br />
 2017-10-11&nbsp; 22:33&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 24,341 randsoftset.txt<br />
 <br />
-<br />
-<div>
-	<br />
-</div>
-<br />
-<div>
-	<br />
-</div>
 <br />
 
 ----------------------------------------------------------------------
