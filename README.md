@@ -13,7 +13,7 @@ No additional libraries are required. Of course, if NumPy is used, the code will
 ## Code Example
 
 
-Running the examples:
+Running the examples: <br />
 To run the first example, change directory to the example you want to run then issue the following command:
 ### Example2, Example3:&nbsp;<br />
 C:\Examples&gt;e:\Python27\python.exe Example2_choice_value.py <br />
@@ -80,7 +80,6 @@ Score Table=<br />
 The max score is:13 , pos is:1<br />
 <br />
 <br />
-
 2017-10-09&nbsp; 22:06&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;232 example4.txt<br />
 2017-10-10&nbsp; 01:22&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2,133 Example4_comparison_score.py<br />
 <br />
@@ -105,12 +104,8 @@ The max score is:3 , pos is:1<br />
 [2, 0, 1]<br />
 2 &gt; 0 &gt; 1<br />
 <br />
-<br />
-
-
 2017-10-09&nbsp; 22:39&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 75 example5.txt<br />
 2017-10-09&nbsp; 22:57&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2,588 Example5_cmpsco_rankrev.py<br />
-<br />
 <br />
 
 ### Example6:&nbsp;<br />
@@ -144,7 +139,6 @@ The max score is:3 , pos is:3<br />
 [2, 1, 0, 3]<br />
 2 &gt; 1 &gt; 0 &gt; 3<br />
 <br />
-<br />
 2017-10-09&nbsp; 22:50&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;100 example6.txt<br />
 2017-10-12&nbsp; 23:43&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2,662 Example6_cmpsco_rankrev.py<br />
 <br />
@@ -163,15 +157,12 @@ The min distance is:0.3226 The choice is:h2<br />
 {0: 0.33687500000000004, 1: 0.4195, 2: 0.322625, 3: 0.352625}<br />
 3 &lt; 1 &lt; 4 &lt; 2<br />
 <br />
-<br />
-<br />
 The Programs for Example7.&nbsp;<br />
 2017-10-10&nbsp; 00:55&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;148 example7.txt<br />
 2017-10-12&nbsp; 23:51&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2,900 Example7_fss_idealsolution.py<br />
 <br />
-<br />
 
-### Example8.&nbsp;<br />
+### Example8:&nbsp;<br />
 C:\Examples&gt;e:\python27\python.exe Example8_fss_idealsolution.py<br />
 [1.0, 1.0, 1.0, 0.881, 1.0, 1.0]<br />
 [0.741, 0.182, 0.5, 0.924, 0.5, 1.0]<br />
@@ -185,13 +176,11 @@ The min distance is:0.2698 The choice is:h2<br />
 666666666667}<br />
 3 &lt; 1 &lt; 4 &lt; 2<br />
 <br />
-<br />
-
 2017-10-10&nbsp; 01:08&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;152 example8.txt<br />
 2017-10-12&nbsp; 23:51&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2,893 Example8_fss_idealsolution.py<br />
 <br />
 
-### Example9.&nbsp;<br />
+### Example9:&nbsp;<br />
 C:\Examples&gt;e:\python27\python.exe Example9_fss_idealsolution.py<br />
 [1.0, 1.0, 1.0, 0.0, 1.0, 1.0]<br />
 [0.741, 0.182, 0.5, 0.924, 0.5, 1.0]<br />
@@ -205,12 +194,11 @@ The min distance is:0.5028 The choice is:h2<br />
 <br />
 3 &lt; 1 &lt; 4 &lt; 2<br />
 <br />
-<br />
 2017-10-10&nbsp; 01:12&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;148 example9.txt<br />
 2017-10-12&nbsp; 23:51&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2,890 Example9_fss_idealsolution.py<br />
 <br />
 
-### Example10.&nbsp;<br />
+### Example10:&nbsp;<br />
 C:\Examples&gt;e:\python27\python.exe Example_fss_idealsolution.py<br />
 [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]<br />
 [0.2, 0.4, 0.1, 0.5, 0.8, 0.1, 0.1]<br />
@@ -230,16 +218,12 @@ The weighted Hamming distance is [0.7140625, 0.6859375000000001, 0.6531250000000
 001, 0.48125, 0.56875, 0.5390625, 0.5593750000000001, 0.56875]<br />
 The min distance is:0.4813 The choice is:h3<br />
 <br />
-The Programs for Example9.&nbsp;<br />
 2017-10-10&nbsp; 00:08&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;247 examplefssis.txt<br />
 2017-10-12&nbsp; 23:48&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2,626 Example_fss_idealsolution.py<br />
 <br />
-<br />
-<br />
-The Programs for Example9.&nbsp;<br />
+#Random generate SoftSet:&nbsp;<br />
 2017-10-09&nbsp; 23:12&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;566 randgen_softset.py<br />
 2017-10-11&nbsp; 22:33&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 24,341 randsoftset.txt<br />
-<br />
 <br />
 
 ----------------------------------------------------------------------
