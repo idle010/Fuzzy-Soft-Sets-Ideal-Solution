@@ -38,7 +38,7 @@ The choicevalue is:0.9375 position is:5<br />
 <br />
 <br />
 
-The Programs for Example2, Example3.&nbsp;<br />
+# Example2, Example3.&nbsp;<br />
 2017-10-09&nbsp; 19:20&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 54 example1.txt<br />
 2017-10-10&nbsp; 01:22&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1,568 Example2_choice_value.py<br />
 2017-10-09&nbsp; 22:55&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1,864 Example3_weighted_choice_value.py<br />
@@ -78,7 +78,7 @@ The max score is:13 , pos is:1<br />
 <br />
 <br />
 
-The Programs for Example4.&nbsp;<br />
+# Example4.&nbsp;<br />
 2017-10-09&nbsp; 22:06&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;232 example4.txt<br />
 2017-10-10&nbsp; 01:22&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2,133 Example4_comparison_score.py<br />
 <br />
@@ -104,7 +104,7 @@ The max score is:3 , pos is:1<br />
 <br />
 
 
-The Programs for Example5.&nbsp;<br />
+#Example5.&nbsp;<br />
 2017-10-09&nbsp; 22:39&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 75 example5.txt<br />
 2017-10-09&nbsp; 22:57&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2,588 Example5_cmpsco_rankrev.py<br />
 <br />
@@ -176,7 +176,9 @@ The min distance is:0.2698 The choice is:h2<br />
 666666666667}<br />
 3 &lt; 1 &lt; 4 &lt; 2<br />
 <br />
-The Programs for Example8.&nbsp;<br />
+<br />
+
+#Example8.&nbsp;<br />
 2017-10-10&nbsp; 01:08&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;152 example8.txt<br />
 2017-10-12&nbsp; 23:51&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2,893 Example8_fss_idealsolution.py<br />
 <br />
@@ -194,7 +196,7 @@ The min distance is:0.5028 The choice is:h2<br />
 3 &lt; 1 &lt; 4 &lt; 2<br />
 <br />
 <br />
-The Programs for Example9.&nbsp;<br />
+#Example9.&nbsp;<br />
 2017-10-10&nbsp; 01:12&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;148 example9.txt<br />
 2017-10-12&nbsp; 23:51&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2,890 Example9_fss_idealsolution.py<br />
 <br />
