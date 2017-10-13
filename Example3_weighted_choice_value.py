@@ -1,6 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #import numpy as np 
+
+""" 
+If you want to test with a large random dataset, 
+change the dataset name to randsoftset.txt 
+"""
 #dataset_name = "randsoftset.txt"
 dataset_name = "example1.txt"
 
@@ -9,6 +14,9 @@ def prt_softset(sf):
         print obj
 
 def load_softset():
+    """
+    Fetches rows from a soft set.
+    """
     softset = []
     for li in open(dataset_name):
         obj = li.strip("\n").split(",")
@@ -42,6 +50,14 @@ def dot_vec(v1, v2):
 
 
 def weighted_choice_value(sf, weight):
+    """The choice value Algorithm
+    Args:
+        sf: The Table of soft set.
+        weight: Subjective weight
+    Returns:
+        decision: A list of the the decision making 
+        example:  [[4.0, 0], [4.0, 5], ...]
+    """
     decision = []
     #candidate,pos = np.dot(sf[0], weight), 0
     candidate,pos = dot_vec(sf[0], weight), 0
