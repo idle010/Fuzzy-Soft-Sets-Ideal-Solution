@@ -5,23 +5,23 @@ This project contains all test cases for "A-method for Fuzzy Soft Sets in Decisi
 
 ## Environmental requirements
 
-Programs can run under Windows, Linux, and Macs.
-Install Python2.7, download Address: https://www.python.org
-No additional libraries are required. Of course, if NumPy is used, the code will be more refined.
+Programs can run under Windows, Linux, and Macs. </br>
+Install Python2.7, download Address: https://www.python.org </br>
+No additional libraries are required. Of course, if NumPy is used, the code will be more refined. </br>
 
 
 ## Code Example
 
-Running programs, example:
-C:\Examples>e:\Python27\python.exe Example2_choice_value.py
-[1.0, 1.0, 1.0, 1.0]
-[1.0, 1.0, 1.0, 0.0]
-[1.0, 0.0, 1.0, 1.0]
-[1.0, 0.0, 1.0, 0.0]
-[1.0, 0.0, 0.0, 0.0]
-[1.0, 1.0, 1.0, 1.0]
-The choicevalue is:4.000 position is:0
-The choicevalue is:4.000 position is:5
+Running programs, example: </br>
+C:\Examples>e:\Python27\python.exe Example2_choice_value.py </br> 
+[1.0, 1.0, 1.0, 1.0]</br> 
+[1.0, 1.0, 1.0, 0.0]</br>
+[1.0, 0.0, 1.0, 1.0]</br>
+[1.0, 0.0, 1.0, 0.0]</br>
+[1.0, 0.0, 0.0, 0.0]</br>
+[1.0, 1.0, 1.0, 1.0]</br>
+The choicevalue is:4.000 position is:0 </br>
+The choicevalue is:4.000 position is:5 </br>
 ----------------------------------------------------------------------
 The Programs for Example2, Example3. 
 2017-10-09  19:20                54 example1.txt
