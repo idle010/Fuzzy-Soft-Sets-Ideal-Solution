@@ -2,8 +2,23 @@
 # -*- coding: utf-8 -*-
 import random
 
+"""
+In some cases, we need large data to test the program.
+This program automatically generates fuzzy soft sets randomly.
+This is especially useful for testing the rank reversal.
+"""
+
+"""
+Change the two values to produce the soft set you want 
+attrib: Number of attributes
+objects:Number of objects
+"""
 attrib = 40
 objects = 100
+
+"""
+Result output file: Randsoftset. txt
+"""
 filename = "randsoftset.txt"
 
 def randgen_softset():

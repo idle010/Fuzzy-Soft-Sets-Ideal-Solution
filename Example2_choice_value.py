@@ -50,6 +50,14 @@ def choice_value(sf):
     return decision
 
 def weighted_choice_value(sf, weight):
+    """The choice value Algorithm
+    Args:
+        sf: The Table of soft set.
+        weight:the weights specified by the experts
+    Returns:
+        decision: A list of the the decision making 
+        example:  [[4.0, 0], [4.0, 5], ...]
+    """
     decision = []
     candidate,pos = sum(sf[0]), 0
     decision.append([candidate, pos])
@@ -63,7 +71,6 @@ def weighted_choice_value(sf, weight):
             decision.append([choicevalue, pos])
         elif choicevalue == decision[0][0]:
             decision.append([choicevalue, pos])
-
     return decision
 
 if __name__ == '__main__':
