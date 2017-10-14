@@ -222,6 +222,11 @@ The min distance is:0.4813 The choice is:h3<br />
 2017-10-12&nbsp; 23:48&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2,626 Example_fss_idealsolution.py<br />
 <br />
 ### Random generate SoftSet:&nbsp;<br />
+In some cases, we need large dataset to test the program.<br />
+This program automatically generates fuzzy soft sets randomly.<br />
+This is especially useful for testing the rank reversal.<br />
+
+
 2017-10-09&nbsp; 23:12&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;566 randgen_softset.py<br />
 2017-10-11&nbsp; 22:33&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 24,341 randsoftset.txt<br />
 <br />

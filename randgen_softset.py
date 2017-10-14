@@ -3,7 +3,7 @@
 import random
 
 """
-In some cases, we need large data to test the program.
+In some cases, we need large dataset to test the program.
 This program automatically generates fuzzy soft sets randomly.
 This is especially useful for testing the rank reversal.
 """
