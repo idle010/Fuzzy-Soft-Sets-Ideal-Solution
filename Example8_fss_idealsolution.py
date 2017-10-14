@@ -1,5 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
+""" 
+If you want to test with a large random dataset, 
+change the dataset name to randsoftset.txt 
+run command:           python randgen_softset.py 
+generate a new random soft set (F,A)
+"""
 #import numpy as np 
 #dataset_name = "randsoftset.txt"
 dataset_name = "example8.txt"
@@ -9,12 +16,16 @@ def prt_softset(sf):
         print obj
 
 def dot_vec(v1, v2):
+    """ Vector multiplication
+    """
     tmp = []
     for i in range(0, len(v1)):
         tmp.append(v1[i] * v2[i])
     return sum(tmp)
 
 def load_softset():
+    """ Fetches rows from a soft set.
+    """
     softset = []
     for li in open(dataset_name):
         obj = li.strip("\n").split(",")
@@ -32,6 +43,8 @@ def norm_Ham_dist(v1, v2):
 
 
 def weighted_Ham_dist(v1, v2, weight):
+    """ The weighted Hamming distance
+    """
     ret_value = 0
     for i in range(0, len(v1)):
         ret_value += abs(v1[i] - v2[i]) * weight[i]
@@ -63,6 +76,14 @@ def norm_Ham_dist_choice(sf):
 
 
 def weighted_Ham_dist_choice(sf, weight):
+    """The fss-ideal ideal solution Algorithm
+    Args:
+        sf: The Table of soft set.
+        weight: Subjective weight
+    Returns:
+        decision: A list of the the decision-making 
+        n_hamdistance: A list of Hamming distance
+    """
     decision = []
     u_goal = sf[0]
     n_hamdistance = []
@@ -106,6 +127,6 @@ if __name__ == '__main__':
             (ret[0], ret[1])
     tmppos = sort_dist_order(result[1])
     
-    print " < ".join([str(c + 1) for c in tmppos])
+    print " < ".join([str(c) for c in tmppos])
 
 
