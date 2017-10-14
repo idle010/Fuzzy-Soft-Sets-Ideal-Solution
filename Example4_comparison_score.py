@@ -28,11 +28,12 @@ def load_softset():
 
 def comp_two_objs(v1,v2):
     """The comparison score algorithm, 
+       compare attributes difference for two objects
     Args:
-        sf: The Table of soft set.
-        weight: Subjective weight
+        v1: The object i of the soft set
+        v2: The object j of the soft set
     Returns:
-        decision: A list of the the decision-making 
+        k: The number of attributes V1 >= V2
     """
     k = 0
     for i in range(0,len(v1)):
@@ -41,6 +42,12 @@ def comp_two_objs(v1,v2):
     return k
 
 def gen_comp_scotable(fss):
+    """The comparison table of fuzzy soft set
+    Args:
+        fss: The table of fuzzy soft set.
+    Returns:
+        ret: A Matrix of comparison table
+    """
     ret = []
     for e1 in fss:
         tmp = []
@@ -50,12 +57,20 @@ def gen_comp_scotable(fss):
     return ret
 
 def gen_score(ret):
+    """The comparison score table of fuzzy soft set
+    Args:
+        ret: The comparison table of fuzzy soft set
+    Returns:
+        score_pos: The score with position
+    """
     compurow = []
+    # compute row-sum
     for e in ret:
         compurow.append(sum(e))
     print "row-sum:", compurow
 
     compucol = []
+    # compute column-sum
     for i in range(0, len(ret[0])):
         tmp = 0
         for e in ret:
@@ -67,12 +82,15 @@ def gen_score(ret):
     score_pos = []
     for i in range(0, len(compucol)):
         scorei = compurow[i] - compucol[i]
+
+        # Print the comparison score table of fuzzy soft set
         print compurow[i], "&", compucol[i], "&", scorei
         score_pos.append( scorei )
 
     return score_pos
 
 def get_choice(score):
+    # Find the best results from comparison score table
     decision = []
     candidate,pos = score[0], 0
     decision.append([candidate, pos])

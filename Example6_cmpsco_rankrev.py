@@ -1,13 +1,36 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+from operator import itemgetter
+from collections import OrderedDict
+
+""" 
+If you want to test with a large random dataset, 
+change the dataset name to randsoftset.txt 
+run command:           python randgen_softset.py 
+generate a new random soft set (F,A)
+"""
 #dataset_name = "randsoftset.txt"
 dataset_name = "example6.txt" # also for Example2
+
+
+def sort_score_order(data_list):
+    """ Sort score according to the value of the dictionary
+    """
+    data_dict = {}
+    for i in range(0,len(data_list)):
+        data_dict[i] = data_list[i] 
+    
+    print data_dict
+    retdata = OrderedDict(sorted(data_dict.items(), key=lambda t: t[1]))
+    return retdata.keys()
 
 def prt_softset(sf):
     for obj in sf:
         print obj
 
 def load_softset():
+    """ Fetches rows from a soft set.
+    """
     softset = []
     for li in open(dataset_name):
         obj = li.strip("\n").split(",")
@@ -17,6 +40,14 @@ def load_softset():
     return softset
 
 def comp_two_objs(v1,v2):
+    """The comparison score algorithm, 
+       compare attributes difference for two objects
+    Args:
+        v1: The object i of the soft set
+        v2: The object j of the soft set
+    Returns:
+        k: The number of attributes V1 >= V2
+    """
     k = 0
     for i in range(0,len(v1)):
         if (v1[i] >= v2[i]):
@@ -24,6 +55,12 @@ def comp_two_objs(v1,v2):
     return k
 
 def gen_comp_scotable(fss):
+    """The comparison table of fuzzy soft set
+    Args:
+        fss: The table of fuzzy soft set.
+    Returns:
+        ret: A Matrix of comparison table
+    """
     ret = []
     for e1 in fss:
         tmp = []
@@ -33,6 +70,12 @@ def gen_comp_scotable(fss):
     return ret
 
 def gen_score(ret):
+    """The comparison score table of fuzzy soft set
+    Args:
+        ret: The comparison table of fuzzy soft set
+    Returns:
+        score_pos: The score with position
+    """
     compurow = []
     for e in ret:
         compurow.append(sum(e))
@@ -56,6 +99,7 @@ def gen_score(ret):
     return score_pos
 
 def get_choice(score):
+    # Find the best results from comparison score table
     decision = []
     candidate,pos = score[0], 0
     decision.append([candidate, pos])
@@ -72,16 +116,6 @@ def get_choice(score):
 
     return decision
 
-from operator import itemgetter
-from collections import OrderedDict
-def sort_score_order(data_list):
-    data_dict = {}
-    for i in range(0,len(data_list)):
-        data_dict[i] = data_list[i] 
-    
-    print data_dict
-    retdata = OrderedDict(sorted(data_dict.items(), key=lambda t: t[1]))
-    return retdata.keys()
 
 if __name__ == '__main__':
     sfset = load_softset()
