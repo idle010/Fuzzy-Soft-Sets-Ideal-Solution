@@ -9,7 +9,7 @@ change the dataset name to randsoftset.txt
 run command:           python randgen_softset.py 
 generate a new random soft set (F,A)
 """
-#dataset_name = "randsoftset.txt"
+dataset_name = "randsoftset.txt"
 dataset_name = "example6.txt" # also for Example2
 
 
@@ -134,5 +134,5 @@ if __name__ == '__main__':
 
     tmp_position = sort_score_order(score)
     print tmp_position
-    print " > ".join([str(c) for c in tmp_position])
+    print " < ".join([str(c) for c in tmp_position])
 

@@ -134,7 +134,7 @@ if __name__ == '__main__':
 
     tmp_position = sort_score_order(score)
     print tmp_position
-    print " > ".join([str(c) for c in tmp_position])
+    print " < ".join([str(c) for c in tmp_position])
 
 
 
