@@ -43,6 +43,8 @@ def choice_value(sf):
     return decision
 
 def dot_vec(v1, v2):
+    """ Vector multiplication: sum(e1*w1+e2*w2...en*wn)
+    """
     tmp = []
     for i in range(0, len(v1)):
         tmp.append(v1[i] * v2[i])
@@ -50,7 +52,7 @@ def dot_vec(v1, v2):
 
 
 def weighted_choice_value(sf, weight):
-    """The choice value Algorithm
+    """The weighted choice value Algorithm
     Args:
         sf: The Table of soft set.
         weight: Subjective weight

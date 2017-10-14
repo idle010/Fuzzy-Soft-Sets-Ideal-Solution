@@ -1,5 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
+""" 
+If you want to test with a large random dataset, 
+change the dataset name to randsoftset.txt 
+run command:           python randgen_softset.py 
+generate a new random soft set (F,A)
+"""
 #dataset_name = "randsoftset.txt"
 dataset_name = "example4.txt" # also for Example2
 
@@ -8,6 +15,9 @@ def prt_softset(sf):
         print obj
 
 def load_softset():
+    """
+    Fetches rows from a soft set.
+    """
     softset = []
     for li in open(dataset_name):
         obj = li.strip("\n").split(",")
@@ -17,6 +27,13 @@ def load_softset():
     return softset
 
 def comp_two_objs(v1,v2):
+    """The comparison score algorithm, 
+    Args:
+        sf: The Table of soft set.
+        weight: Subjective weight
+    Returns:
+        decision: A list of the the decision-making 
+    """
     k = 0
     for i in range(0,len(v1)):
         if (v1[i] >= v2[i]):
