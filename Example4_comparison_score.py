@@ -9,6 +9,7 @@ generate a new random soft set (F,A)
 """
 #dataset_name = "randsoftset.txt"
 dataset_name = "example4.txt" # also for Example2
+dataset_name = "maji2.txt" # also for Example2
 
 def prt_softset(sf):
     for obj in sf:

@@ -1,35 +1,28 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from operator import itemgetter
-from collections import OrderedDict
 
 """ 
+J. C. R. Alcantud. A novel algorithm for fuzzy soft set based decision making from multiobserver input parameter data set. Information Fusion 29 (2016), 142-148.
+* Algorithm 3 *
+
 If you want to test with a large random dataset, 
 change the dataset name to randsoftset.txt 
 run command:           python randgen_softset.py 
 generate a new random soft set (F,A)
 """
 #dataset_name = "randsoftset.txt"
-dataset_name = "example6.txt" # also for Example2
-
-
-def sort_score_order(data_list):
-    """ Sort score according to the value of the dictionary
-    """
-    data_dict = {}
-    for i in range(0,len(data_list)):
-        data_dict[i] = data_list[i] 
-    
-    print data_dict
-    retdata = OrderedDict(sorted(data_dict.items(), key=lambda t: t[1]))
-    return retdata.keys()
+#dataset_name = "example4.txt" # also for Example2
+#dataset_name = "maji2.txt" # also for Example2
+dataset_name = "alcantud2016table6.txt" # also for Example2
 
 def prt_softset(sf):
     for obj in sf:
-        print obj
+        tmp = ["%.3f" % c for c in obj]
+        print tmp
 
 def load_softset():
-    """ Fetches rows from a soft set.
+    """
+    Fetches rows from a soft set.
     """
     softset = []
     for li in open(dataset_name):
@@ -38,6 +31,25 @@ def load_softset():
         softset.append(obj)
 
     return softset
+
+def find_max_M(sf):
+    ret = []
+
+    for i in range(0, len(sf[0])):
+        max_value = 0
+        for j in range(0, len(sf)):
+            if sf[j][i] > max_value:
+                max_value = sf[j][i]
+        ret.append(max_value)
+
+    return ret
+
+def comp_two_objs1(v1,v2, M):
+    k = 0
+    for i in range(0,len(v1)):
+        if v1[i] > v2[i]:
+            k += (v1[i] - v2[i]) * 1.0 / M[i]
+    return k
 
 def comp_two_objs(v1,v2):
     """The comparison score algorithm, 
@@ -61,11 +73,12 @@ def gen_comp_scotable(fss):
     Returns:
         ret: A Matrix of comparison table
     """
+    M = find_max_M(fss)
     ret = []
     for e1 in fss:
         tmp = []
         for e2 in fss:
-            tmp.append(comp_two_objs(e1, e2))
+            tmp.append(comp_two_objs1(e1, e2, M))
         ret.append(tmp)
     return ret
 
@@ -77,23 +90,28 @@ def gen_score(ret):
         score_pos: The score with position
     """
     compurow = []
+    # compute row-sum
     for e in ret:
         compurow.append(sum(e))
-    print "row-sum:", compurow
+    #print "row-sum:", compurow
 
     compucol = []
+    # compute column-sum
     for i in range(0, len(ret[0])):
         tmp = 0
         for e in ret:
             tmp += e[i]
         compucol.append(tmp)
-    print "col-sum:", compucol
+    #print "col-sum:", compucol
 
     print "Score Table="
     score_pos = []
     for i in range(0, len(compucol)):
         scorei = compurow[i] - compucol[i]
-        print compurow[i], "&", compucol[i], "&", scorei
+
+        # Print the comparison score table of fuzzy soft set
+        #print compurow[i], "&", compucol[i], "&", scorei
+        print "%3.f \t %.3f \t %.3f" % (compurow[i],  compucol[i],  scorei)
         score_pos.append( scorei )
 
     return score_pos
@@ -116,23 +134,17 @@ def get_choice(score):
 
     return decision
 
-
 if __name__ == '__main__':
     sfset = load_softset()
-    print "------------------\nSoft Set = "
+    print "Soft Set = "
     prt_softset(sfset)
-    print "------------------\nComparison Table = "
+    print "Comparison Table = "
     score_table = gen_comp_scotable(sfset)
     prt_softset(score_table)
 
     score = gen_score(score_table)
-    print "------------------\nScore:"
-    print score
+    #print score
     choice = get_choice(score)
     for ch in choice:
-        print "The max score is:%d , pos is:%d" % (ch[0], ch[1])
-
-    tmp_position = sort_score_order(score)
-    print tmp_position
-    print " < ".join([str(c) for c in tmp_position])
+        print "The max score is:%.3f , pos is:%d" % (ch[0], ch[1] + 1)
 
