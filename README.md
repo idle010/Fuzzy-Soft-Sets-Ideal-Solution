@@ -1,4 +1,9 @@
 "# Fuzzy-Soft-Sets-Ideal-Solution" 
+
+http://www.mdpi.com/2073-8994/9/10/246
+Liu, Z.; Qin, K.; Pei, Z.	A Method for Fuzzy Soft Sets in Decision-Making Based on an Ideal Solution. Symmetry 2017, 9, 246.
+
+
 ## Synopsis
 
 This project contains all test cases for "A method for Fuzzy Soft Sets in Decision making Based on Ideal Solution".
